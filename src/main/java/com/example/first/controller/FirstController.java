@@ -50,8 +50,8 @@ public class FirstController {
 	public void updateStudentEmail(@RequestBody Student student) { 
 		 studentService.updateStudentEmail(student.getEmail(),student.getId());
 	}
-//	@GetMapping("/allJoinStudent")
-//	public List<Response> allJoinStudent() { 
-//		return studentService.getStudentJoinData();
-//	}
+	@GetMapping("/allJoinStudent")
+	public List<Response> allJoinStudent() { 
+		return studentService.getStudentJoinData();
+	}
 }

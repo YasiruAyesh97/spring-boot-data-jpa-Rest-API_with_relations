@@ -24,8 +24,8 @@ public interface StudentRepository extends CrudRepository<Student, String> {
 //	@Query("Select s.name ,s.email ,d.depName  from Student s JOIN Deparment d  ON s.dep_fk=d.id")
 //	public Iterable<Student> getJoinInformation();
 	
-//	@Query("Select new com.example.first.dto.Response(s.name ,s.email ,d.depName)  FROM Student s JOIN Deparment d  ON s.dep_fk=d.id")
-//	public List<Response> getJoinInformation();
+	@Query("Select new com.example.first.dto.Response(s.name ,s.email ,d.depName)  FROM Student s JOIN Deparment d  ON s.dep_fk=d.id")
+	public List<Response> getJoinInformation();
 	
 
 }

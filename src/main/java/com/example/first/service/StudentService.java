@@ -39,7 +39,7 @@ public class StudentService {
 	public void updateStudentEmail(String email,String id) {
 		 studentRepository.updateStudentEmail(email,id);
 	}
-//	public List<Response> getStudentJoinData() {
-//		return studentRepository.getJoinInformation();
-//	}
+	public List<Response> getStudentJoinData() {
+		return studentRepository.getJoinInformation();
+	}
 }
