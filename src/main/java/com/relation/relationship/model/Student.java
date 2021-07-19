@@ -73,6 +73,10 @@ public class Student {
 	}
 	
 	
+	public Student() {
+		
+	}
+
 	public Student(CreateStudentRequest createStudentRequest) {
 		this.firstName = createStudentRequest.getFirstName();
 		this.lastName = createStudentRequest.getLastName();

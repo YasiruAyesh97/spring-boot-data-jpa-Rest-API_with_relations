@@ -1,5 +1,7 @@
 package com.relation.relationship.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,4 +33,11 @@ public class StudentService {
 		student = studentRepository.save(student);
 		return student;
 	}
+	public List<Student> getByCity (String city) {
+		return studentRepository.getByAddressCity(city);
+	}
+	public Iterable<Student> getAllStudents () {
+		return studentRepository.findAll();
+	}
+	
 }
