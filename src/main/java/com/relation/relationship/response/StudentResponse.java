@@ -1,6 +1,10 @@
 package com.relation.relationship.response;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.relation.relationship.model.Student;
+import com.relation.relationship.model.Subject;
 
 public class StudentResponse {
 	
@@ -16,6 +20,8 @@ public class StudentResponse {
 
 	private String city;
 	
+	private List<SubjectResponse> learningSubjects;
+	
 	public StudentResponse (Student student) {
 		this.id = student.getId();
 		this.firstName = student.getFirstName();
@@ -24,8 +30,16 @@ public class StudentResponse {
 		
 		this.street = student.getAddress().getStreet();
 		this.city = student.getAddress().getCity();
+		
+		if (student.getLearningSubject() != null) {
+			learningSubjects = new ArrayList<SubjectResponse>();
+			for (Subject subject: student.getLearningSubject()) {
+				learningSubjects.add(new SubjectResponse(subject));
+			}
+		}
 	}
 
+	
 	public Integer getId() {
 		return id;
 	}
@@ -73,5 +87,16 @@ public class StudentResponse {
 	public void setCity(String city) {
 		this.city = city;
 	}
+
+
+	public List<SubjectResponse> getLearningSubjects() {
+		return learningSubjects;
+	}
+
+
+	public void setLearningSubjects(List<SubjectResponse> learningSubjects) {
+		this.learningSubjects = learningSubjects;
+	}
+	
 	
 }

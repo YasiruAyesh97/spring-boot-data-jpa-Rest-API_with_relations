@@ -1,5 +1,7 @@
 package com.relation.relationship.request;
 
+import java.util.List;
+
 public class CreateStudentRequest {
 	
 	private String firstName;
@@ -12,6 +14,9 @@ public class CreateStudentRequest {
 
 	private String city;
 
+	private List<CreateSubjectRequest> subjectsLearning;
+	
+	
 	public String getFirstName() {
 		return firstName;
 	}
@@ -50,6 +55,14 @@ public class CreateStudentRequest {
 
 	public void setCity(String city) {
 		this.city = city;
+	}
+
+	public List<CreateSubjectRequest> getSubjectsLearning() {
+		return subjectsLearning;
+	}
+
+	public void setSubjectsLearning(List<CreateSubjectRequest> subjectsLearning) {
+		this.subjectsLearning = subjectsLearning;
 	}
 	
 	
