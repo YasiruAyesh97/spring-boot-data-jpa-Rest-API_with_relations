@@ -73,7 +73,7 @@ public class Student {
 	}
 	
 	
-	public Student (CreateStudentRequest createStudentRequest) {
+	public Student(CreateStudentRequest createStudentRequest) {
 		this.firstName = createStudentRequest.getFirstName();
 		this.lastName = createStudentRequest.getLastName();
 		this.email = createStudentRequest.getEmail();

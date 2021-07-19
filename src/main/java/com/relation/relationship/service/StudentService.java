@@ -1,6 +1,7 @@
 package com.relation.relationship.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.relation.relationship.model.Address;
 import com.relation.relationship.model.Student;
@@ -8,6 +9,7 @@ import com.relation.relationship.repository.AddressRepository;
 import com.relation.relationship.repository.StudentRepository;
 import com.relation.relationship.request.CreateStudentRequest;
 
+@Service
 public class StudentService {
 
 	@Autowired
@@ -16,7 +18,7 @@ public class StudentService {
 	@Autowired
 	AddressRepository addressRepository;
 	
-	public Student createStudent (CreateStudentRequest createStudentRequest) {
+	public Student createStudent(CreateStudentRequest createStudentRequest) {
 		Student student = new Student(createStudentRequest);
 		
 		Address address = new Address();
